@@ -1,4 +1,4 @@
-package entities;
+package com.toDo.crud.entities;
 
 import jakarta.persistence.*;
 
@@ -7,7 +7,7 @@ public class ToDo {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Integer id;
     @Column(name = "name")
     private String name;
     @Column(name = "description")
@@ -16,17 +16,17 @@ public class ToDo {
     public ToDo() {
     }
 
-    public ToDo(Long id, String name, String description) {
+    public ToDo(Integer id, String name, String description) {
         this.id = id;
         this.name = name;
         this.description = description;
     }
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
